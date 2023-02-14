@@ -19,15 +19,15 @@ const getProductById = async (id) => {
 //   return getAllProducts();
 // };
 
-const insertProduct = async (name) => {
-  console.log(name);
-  const product = await productsModel.insertProduct(name);
-  // if (!product.name) {
-  //   return { type: 400, message: '"name" is required' };
-  // } if (product.name.length < 5) {
-  //     return { type: 422, message: '"name" length must be at least 5 characters long' };
-  // }
-  return { id: product, ...name };
+const insertProduct = async (newProduct) => {
+  const productId = await productsModel.insertProduct(newProduct);
+  // console.log(productId);
+  if (!newProduct.name) {
+    return { type: 400, message: '"name" is required' };
+  } if (newProduct.name.length < 5) {
+      return { type: 422, message: '"name" length must be at least 5 characters long' };
+  }
+  return { id: productId, ...newProduct };
 };
 
 module.exports = { getAllProducts, getProductById, insertProduct };
