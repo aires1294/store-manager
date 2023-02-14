@@ -10,6 +10,7 @@ app.get('/', (_request, response) => {
 
 app.use('/products', productsRouter);
 app.use('/products/:id', productsRouter);
+app.use('/products', productsRouter);
 
 // não remova essa exportação, é para o avaliador funcionar
 // você pode registrar suas rotas normalmente, como o exemplo acima

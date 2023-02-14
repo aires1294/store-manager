@@ -1,4 +1,4 @@
-const productsModel = require('../models/products.models');
+const productsModel = require('../models/products.model');
 
 const getAllProducts = async () => {
   const allProducts = await productsModel.getAllProducts();
@@ -14,4 +14,20 @@ const getProductById = async (id) => {
   return { type: 200, message: productId };
 };
 
-module.exports = { getAllProducts, getProductById };
+// const insertProduct = async (name) => {
+//   await Promise.all(name.map(async (product) => productsModel.insertProduct(product)));
+//   return getAllProducts();
+// };
+
+const insertProduct = async (name) => {
+  const product = await productsModel.insertProduct(name);
+  console.log(product);
+  if (!product.name) {
+    return { type: 400, message: '"name" is required' };
+  } if (product.name.length < 5) {
+      return { type: 422, message: '"name" length must be at least 5 characters long' };
+  }
+  return { id: product, ...name };
+};
+
+module.exports = { getAllProducts, getProductById, insertProduct };

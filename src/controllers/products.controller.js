@@ -15,4 +15,21 @@ const getProductById = async (req, res) => {
   return res.status(productId.type).json(productId.message);
 };
 
-module.exports = { getAllProducts, getProductById };
+// const insertProduct = async (req, res) => {
+//   const newProduct = req.body;
+//   const { type, message } = await productsService.insertProduct(newProduct);
+//   if (type) return res.status(type).json({ message });
+//   res.status(201).json(message);
+// };
+const insertProduct = async (req, res) => {
+  const newProduct = req.body;
+  const product = await productsService.insertProduct(newProduct);
+  if (product.type === 400) {
+    return res.status(product.type).json({ message: product.message });
+  } if (product.type === 422) {
+    return res.status(product.type).json({ message: product.message });
+  }
+  return res.status(201).json(product);
+};
+
+module.exports = { getAllProducts, getProductById, insertProduct };
