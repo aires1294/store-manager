@@ -36,12 +36,31 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-02-13T22:19:50.693Z",
-    "modified": "2023-02-14T18:49:48.800Z",
+    "modified": "2023-02-14T18:57:56.855Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"p\"\n}",
+      "raw": "{\n  \"name\": \"pdsadsadsadsa\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0c87a5f1-f78b-4efa-93a6-13d721ff74b9",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/sales",
+    "url": "http://localhost:3000/sales",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-02-13T22:19:50.693Z",
+    "modified": "2023-02-14T21:55:33.799Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 1\n  },\n  {\n    \"productId\": 2,\n    \"quantity\": 5\n  }\n]",
       "form": []
     },
     "tests": []

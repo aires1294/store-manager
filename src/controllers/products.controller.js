@@ -15,15 +15,10 @@ const getProductById = async (req, res) => {
   return res.status(productId.type).json(productId.message);
 };
 
-// const insertProduct = async (req, res) => {
-//   const newProduct = req.body;
-//   const { type, message } = await productsService.insertProduct(newProduct);
-//   if (type) return res.status(type).json({ message });
-//   res.status(201).json(message);
-// };
 const insertProduct = async (req, res) => {
   const newProduct = req.body;
   const product = await productsService.insertProduct(newProduct);
+  console.log('oiii', product);
   if (product.type === 400) {
     return res.status(product.type).json({ message: product.message });
   } if (product.type === 422) {

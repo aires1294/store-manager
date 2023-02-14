@@ -11,17 +11,12 @@ const getProductById = async (id) => {
   return result;
 };
 
-// const insertProduct = async (name) => {
-//   await connection.execute(
-//     'INSERT INTO products (name) VALUES (?)',
-//   [name],
-// );
-// };
-
 const insertProduct = async (newProduct) => {
   const product = 'INSERT INTO products (name) VALUES (?)';
   const [{ insertId }] = await connection.execute(product, [newProduct]);
-  // console.log('aqui', newProduct);
+    // const insertId = await connection.execute(product, [newProduct]);
+
+  console.log('aqui', insertId);
   return insertId;
 };
 
