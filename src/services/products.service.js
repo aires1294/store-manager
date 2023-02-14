@@ -20,13 +20,13 @@ const getProductById = async (id) => {
 // };
 
 const insertProduct = async (name) => {
+  console.log(name);
   const product = await productsModel.insertProduct(name);
-  console.log(product);
-  if (!product.name) {
-    return { type: 400, message: '"name" is required' };
-  } if (product.name.length < 5) {
-      return { type: 422, message: '"name" length must be at least 5 characters long' };
-  }
+  // if (!product.name) {
+  //   return { type: 400, message: '"name" is required' };
+  // } if (product.name.length < 5) {
+  //     return { type: 422, message: '"name" length must be at least 5 characters long' };
+  // }
   return { id: product, ...name };
 };
 
