@@ -9,10 +9,17 @@ const insertSale = async (newSale) => {
     return { type: 404, message: 'Product not found' };
   }
   const saleDone = await salesModel.insertSale(newSale);
-  console.log('alooooooo', saleDone);
+  // console.log('alooooooo', saleDone);
   return saleDone;
 };  
 
+const getAllSales = async () => {
+  const getSales = await salesModel.getAllSales();
+  console.log('estou aqui agora', getSales);
+  return getSales;
+};
+
 module.exports = {
   insertSale,
+  getAllSales,
 };

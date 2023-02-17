@@ -14,6 +14,20 @@
     "tests": []
   },
   {
+    "_id": "6dde0571-78df-4470-8856-a7f13b98499b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/sales",
+    "url": "http://localhost:3000/sales",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-13T19:15:56.390Z",
+    "modified": "2023-02-17T19:07:08.220Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
     "_id": "ca4aae42-c77d-48a7-bea9-166fa3fc8b8f",
     "colId": "history",
     "containerId": "",

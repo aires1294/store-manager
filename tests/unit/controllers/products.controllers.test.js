@@ -21,16 +21,16 @@ describe('Controller de products', function () {
       expect(res.status).to.have.been.calledWith(200);
       expect(res.json).to.have.been.calledWithExactly(products);
     })
-    // it('Deve retornar uma resposta com status 200 e o produto pelo ID', async function () {
-    //   const req = { params: { id: 1 } };
-    //   const res = {};
-    //   res.status = sinon.stub().returns(res);
-    //   res.json = sinon.stub().returns();
-    //   sinon.stub(productsService, 'getProductById').resolves(products);
-    //   await productsController.getProductById(req, res);
-    //   expect(res.status).to.have.been.calledWith(200);
-    //   expect(res.json).to.have.been.calledWithExactly(products[0]);
+    it('Deve retornar uma resposta com status 200 e o produto pelo ID', async function () {
+      const req = { params: { id: 1 } };
+      const res = {};
+      res.status = sinon.stub().returns(res);
+      res.json = sinon.stub().returns();
+      sinon.stub(productsService, 'getProductById').resolves({ type:200, message: products[0] });
+      await productsController.getProductById(req, res);
+      expect(res.status).to.have.been.calledWith(200);
+      expect(res.json).to.have.been.calledWithExactly(products[0]);
       
-    // })
+    })
   })
 })
