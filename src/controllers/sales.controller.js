@@ -16,7 +16,17 @@ const getAllSales = async (_req, res) => {
   return res.status(200).json(getSales);
 };
 
+const getSalesById = async (req, res) => {
+  const { id } = req.params;
+  const getSale = await salesService.getSalesById(id);
+  if (getSale.type === 404) {
+    return res.status(getSale.type).json({ message: getSale.message });
+  }
+  return res.status(getSale.type).json(getSale.message);
+};
+
 module.exports = {
   insertSale,
   getAllSales,
+  getSalesById,
 };

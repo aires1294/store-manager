@@ -15,11 +15,21 @@ const insertSale = async (newSale) => {
 
 const getAllSales = async () => {
   const getSales = await salesModel.getAllSales();
-  console.log('estou aqui agora', getSales);
+  // console.log('estou aqui agora', getSales);
   return getSales;
+};
+
+const getSalesById = async (id) => {
+  const getSale = await salesModel.getSalesById(id);
+  console.log('flamengoo', getSale);
+  if (getSale.length === 0) {
+    return { type: 404, message: 'Sale not found' };
+  }
+      return { type: 200, message: getSale };
 };
 
 module.exports = {
   insertSale,
   getAllSales,
+  getSalesById,
 };

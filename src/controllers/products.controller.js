@@ -18,7 +18,7 @@ const getProductById = async (req, res) => {
 const insertProduct = async (req, res) => {
   const newProduct = req.body;
   const product = await productsService.insertProduct(newProduct);
-  console.log('oiii', product);
+  // console.log('oiii', product);
   if (product.type === 400) {
     return res.status(product.type).json({ message: product.message });
   } if (product.type === 422) {
