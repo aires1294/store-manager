@@ -56,6 +56,20 @@
     "tests": []
   },
   {
+    "_id": "872058e8-c20d-4540-8111-e23de9608573",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/1 ",
+    "url": "http://localhost:3000/products/2",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-02-13T19:41:44.884Z",
+    "modified": "2023-02-20T02:06:10.793Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
     "_id": "d8c55a8b-1ae7-4ece-9bdd-9fc7caed66bf",
     "colId": "history",
     "containerId": "",
