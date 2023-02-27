@@ -23,9 +23,10 @@ describe('Service de products', function() {
       sinon.restore();
       });
   
-  // it('Deve retornar o produto de acordo com o ID', async function () {
-  //   sinon.stub(productsModels, 'getProductById').resolves(productById);
-  //   const result = await productsService.getProductById(1);
-  //   expect(result).to.be.deep.equal(productById.message);
-  // });
+  it('Deve retornar o produto de acordo com o ID', async function () {
+    sinon.stub(productsModels, 'getProductById').resolves(productById);
+    const result = await productsService.getProductById(1);
+    // console.log(result);
+    expect(result.message).to.be.deep.equal(productById);
+  });
 })
