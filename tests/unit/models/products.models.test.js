@@ -26,11 +26,11 @@ describe('Model de orders', function () {
   describe('Testando função getProductById', function () {
    
     it('Deveria retornar o produto especificado pelo Id', async function () {
-      sinon.stub(connection, 'execute').resolves(products);
+      sinon.stub(connection, 'execute').resolves([[products[1]]]);
 
       const result = await productsModels.getProductById(1);
 
-      expect(result).to.be.deep.equal(product);
+      expect(result).to.be.deep.equal(products[1]);
     });
     
   

@@ -11,6 +11,7 @@ const getProductById = async (id) => {
   if (!productId) {
     return { type: 404, message: 'Product not found' };
   }
+  console.log('testandooo', productId);
   return { type: 200, message: productId };
 };
 

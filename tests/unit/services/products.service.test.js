@@ -4,6 +4,8 @@ const sinon = require('sinon');
 const productsService = require('../../../src/services/products.service');
 const productsModels = require('../../../src/models/products.model')
 const products = require('../services/mock.service');
+const productById = require('../services/mock.service');
+
 
 const { expect } = chai;
 
@@ -16,8 +18,14 @@ describe('Service de products', function() {
       // expect(result.type).to.be.equal(null);
       expect(result).to.be.deep.equal(products);
     })
-    afterEach(() => {
-      sinon.restore();
-    });
   })
+      afterEach(() => {
+      sinon.restore();
+      });
+  
+  // it('Deve retornar o produto de acordo com o ID', async function () {
+  //   sinon.stub(productsModels, 'getProductById').resolves(productById);
+  //   const result = await productsService.getProductById(1);
+  //   expect(result).to.be.deep.equal(productById.message);
+  // });
 })
