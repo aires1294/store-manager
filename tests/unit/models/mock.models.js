@@ -12,6 +12,28 @@ const products = [{
 }
 ];
 
+
+const deletedProducts = [
+  {
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "info": "",
+    "serverStatus": 2,
+    "warningStatus": 0
+  },
+  null
+]
+
+const deleteResult = {
+  "fieldCount": 0,
+  "affectedRows": 1,
+  "insertId": 0,
+  "info": "",
+  "serverStatus": 2,
+  "warningStatus": 0
+}
+
 const product = {
   "id": 1,
   "name": "Martelo de Thor"
@@ -20,4 +42,6 @@ const product = {
 module.exports = {
   products,
   product,
+  deletedProducts,
+  deleteResult,
 }

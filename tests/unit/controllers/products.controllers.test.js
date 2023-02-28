@@ -5,6 +5,7 @@ const sinon = require('sinon');
 const productsService = require('../../../src/services/products.service');
 const productsController = require('../../../src/controllers/products.controller');
 const products = require('./mock.controller');
+// const product = require('./mock.controller')
 
 chai.use(sinonChai);
 const { expect } = chai;

@@ -11,7 +11,7 @@ const getProductById = async (id) => {
   if (!productId) {
     return { type: 404, message: 'Product not found' };
   }
-  console.log('testandooo', productId);
+  // console.log('testandooo', productId);
   return { type: 200, message: productId };
 };
 
@@ -28,7 +28,7 @@ const insertProduct = async (newProduct) => {
 
 const deleteProduct = async (id) => {
   const product = await productsModel.deleteProduct(id);
-  console.log('fodeuuuu', product);
+  console.log('entendendo retorno', product);
   if (product.affectedRows === 1) {
     return { type: 204, message: '' };
   }

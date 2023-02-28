@@ -11,3 +11,13 @@ const products = [{
   "name": "Escudo do Capitão América"
 }
 ];
+
+const product = {
+  "id": 1,
+  "name": "Martelo de Thor"
+}
+
+module.exports = {
+  products,
+  product,
+}
