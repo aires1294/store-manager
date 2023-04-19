@@ -33,4 +33,5 @@ A versão do Node.js e NPM recomendada é "node": ">=16.0.0" e "npm": ">=7.0.0",
 # Autor
 
 Pedro Teixeira Jacobina Aires
-<i class="devicon-linkedin-plain-wordmark"></i>: https://www.linkedin.com/in/pedrotja/
+LINKEDIN: https://www.linkedin.com/in/pedrotja/
+
