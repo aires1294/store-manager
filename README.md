@@ -11,7 +11,7 @@ Docker e docker-compose (versão 1.29 ou superior) instalados (caso queira rodar
 Node.js (versão >=16.0.0) e npm (versão >=7.0.0) instalados (caso queira rodar localmente)
 
 # Instalação e Execução
-Com Docker
+## Com Docker
 Clone este repositório e navegue até a pasta do projeto.
 No terminal, execute o comando docker-compose up -d para iniciar os serviços de node e db em containers.
 Caso queira executar os comandos do npm dentro do container, utilize o comando docker-compose run node [comando] (ex: docker-compose run node npm test).
@@ -19,7 +19,7 @@ Acesse o container do projeto com o comando docker exec -it store_manager bash.
 Dentro do container, instale as dependências com o comando npm install.
 Execute os comandos disponíveis no package.json (ex: npm test, npm run dev) dentro do container.
 
-Sem Docker
+## Sem Docker
 Clone este repositório e navegue até a pasta do projeto.
 No terminal, execute o comando npm install para instalar as dependências.
 Renomeie o arquivo .env.example para .env e configure as variáveis de ambiente necessárias.
