@@ -33,11 +33,10 @@ A versão do Node.js e NPM recomendada é "node": ">=16.0.0" e "npm": ">=7.0.0",
 # Autor
 
 Pedro Teixeira Jacobina Aires
-LINKEDIN: https://www.linkedin.com/in/pedrotja/
+
 <div>
   <a href="https://www.linkedin.com/in/pedrotja/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-
+   <a href="mailto:pedrotja.engenharia@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+" target="_blank"></a>
 </div>
-
-            <i class="devicon-linkedin-plain-wordmark"></i>
           
