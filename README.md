@@ -30,4 +30,4 @@ Caso utilize o Docker, lembre-se de executar os comandos dentro do container ou 
 Verifique se a porta 3000 está sendo utilizada por outro processo. Caso sim, pare o container ou processo em conflito.
 A versão do Node.js e NPM recomendada é "node": ">=16.0.0" e "npm": ">=7.0.0", como descrito na chave "engines" no arquivo package.json.
 
-Principais 
+Linkedin: https://www.linkedin.com/in/pedrotja/
