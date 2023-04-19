@@ -18,6 +18,7 @@ Caso queira executar os comandos do npm dentro do container, utilize o comando d
 Acesse o container do projeto com o comando docker exec -it store_manager bash.
 Dentro do container, instale as dependências com o comando npm install.
 Execute os comandos disponíveis no package.json (ex: npm test, npm run dev) dentro do container.
+
 Sem Docker
 Clone este repositório e navegue até a pasta do projeto.
 No terminal, execute o comando npm install para instalar as dependências.
